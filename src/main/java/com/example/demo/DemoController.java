@@ -13,7 +13,7 @@ public class DemoController {
 	}
 
 	@GetMapping("/foo")
-	public String foo(@RequestParam(name="param", required=false, defaultValue="default value") String name) {
-		return "foo";
+	public String foo(@RequestParam(name="param", required=true, defaultValue="default value") String param) {
+		return "param: " + param;
 	}
 }
